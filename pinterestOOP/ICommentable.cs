@@ -4,7 +4,9 @@ using System.Text;
 
 namespace pinterestOOP
 {
-    internal interface ICommentable
+    public interface ICommentable
     {
+        void TambahKomentar(string teks, string user);
+        void HapusKomentar(int idKomentar);
     }
 }

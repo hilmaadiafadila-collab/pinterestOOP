@@ -4,7 +4,9 @@ using System.Text;
 
 namespace pinterestOOP
 {
-    internal interface IReportable
+    public interface IReportable
     {
+        void LaporkanKonten(string alasan, string user);
+        bool IsBanned { get; set; }
     }
 }
