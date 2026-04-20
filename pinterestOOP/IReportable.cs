@@ -6,7 +6,7 @@ namespace pinterestOOP
 {
     public interface IReportable
     {
-        void LaporkanKonten(string alasan, string user);
+        void Laporkan(string alasan, string user);
         bool IsBanned { get; set; }
     }
 }

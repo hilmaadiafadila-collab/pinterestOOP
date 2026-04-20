@@ -1,33 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace pinterestOOP
 {
     public abstract class Content
     {
-        public string Id;
-        public string URLGambar;
-        public string Deskripsi;
-        public string Creator;
-        public int JumlahLike;
-        public DateTime TanggalUnggah;
+        private string id;
+        private int jumlahLike;
 
-        public List<string> DaftarKomentar = new List<string>();
-
-        //Method
-        public abstract void TampilkanKonten();
-
-        public void EditDeskripsi(string deskripsiBaru)
+        public string Id
         {
-            this.Deskripsi = deskripsiBaru;
-            Console.WriteLine($"Deskripsi konten {Id} berhasil diperbarui.");
+            get { return this.id; }
+            set
+            {
+                if (value.Length < 5)
+                {
+                    Console.WriteLine("Peringatan: ID Konten harus minimal 5 karakter.");
+                    this.id = "ID_INVALID";
+                }
+                else
+                {
+                    this.id = value;
+                }
+            }
         }
+
+        public int JumlahLike
+        {
+            get { return this.jumlahLike; }
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Peringatan: Jumlah like tidak mungkin minus!");
+                    this.jumlahLike = 0;
+                }
+                else
+                {
+                    this.jumlahLike = value;
+                }
+            }
+        }
+
+        public string URLGambar { get; set; }
+        public string Deskripsi { get; set; }
+        public string Creator { get; set; }
+
+        // Mengganti _ dengan nama variabel biasa.
+        // Protected agar bisa diakses oleh subclass seperti ImagePin.
+        protected List<comment> daftarKomentar = new List<comment>();
+
+        public abstract void TampilkanKonten();
 
         public void LikeKonten()
         {
             this.JumlahLike++;
-            Console.WriteLine($"Konten {Id} disukai! Total like: {JumlahLike}");
+            Console.WriteLine($"Konten {this.Id} disukai! Total: {this.JumlahLike}");
         }
     }
 }
