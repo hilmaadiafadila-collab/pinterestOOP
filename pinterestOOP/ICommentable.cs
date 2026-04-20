@@ -7,6 +7,9 @@ namespace pinterestOOP
     public interface ICommentable
     {
         void TambahKomentar(string teks, string user);
+
+        void TampilkanSemuaKomentar();
+
         void HapusKomentar(int idKomentar);
     }
 }
