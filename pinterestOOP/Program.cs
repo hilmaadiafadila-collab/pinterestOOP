@@ -12,7 +12,7 @@ namespace pinterestOOP
             user.Login("ReviethaCantik", "user123");
 
             //Membuat Konten (bisa Image & Video)
-            ImagePin tutorMasak = new VideoPin { Id = "VID001", URLGambar = "masak.mp4", Creator = "ChefJuna", DurasiDetik = 60 };
+            VideoPin tutorMasak = new VideoPin { Id = "VID001", URLGambar = "masak.mp4", Creator = "ChefJuna", DurasiDetik = 60 };
             ImagePin fotoPemandangan = new ImagePin { Id = "IMG001", URLGambar = "GunungMerbabu.jpg", Creator = "ReviPendakiKalcer" };
 
             //Membuat Board (AGREGASI)
@@ -23,15 +23,15 @@ namespace pinterestOOP
             user.SimpanPin(fotoPemandangan, boardInspirasi);
 
             //Inrteraksi (Interface ICommentable)
-            VideoPin.TambahKomentar("Enak banget chepp, aku dah recook!", "Jojo");
-            VideoPin.TampilkanSemuaKomentar();
+            tutorMasak.TambahKomentar("Enak banget chepp, aku dah recook!", "Jojo");
+            tutorMasak.TampilkanSemuaKomentar();
 
             //Pelaporan (Interface IReportable)
             tutorMasak.Laporkan("Ini Spam", "Admin");
             tutorMasak.TampilkanKonten();
 
             user.Logout();
-            }
+            
         }
     }
 }
