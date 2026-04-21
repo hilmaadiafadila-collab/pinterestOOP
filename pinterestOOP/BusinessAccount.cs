@@ -5,7 +5,7 @@ namespace pinterestOOP
     // Mewarisi abstract class 'Account' DAN memakai interface 'IReportable'
     public class BusinessAccount : Account, IReportable
     {
-        public string WebsiteBisnis;
+        public string? WebsiteBisnis;
         private bool isBanned;
 
         public bool IsBanned
