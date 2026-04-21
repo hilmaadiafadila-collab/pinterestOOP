@@ -2,13 +2,13 @@
 
 namespace pinterestOOP
 {
-    public abstract class account
+    public abstract class Account
     {
-        private string email;
-        private string password;
+        private string email = string.Empty;
+        private string password = string.Empty;
 
-        public string Username;
-        public string Bio;
+        public string Username = string.Empty;
+        public string Bio = string.Empty;
 
         public string Email
         {

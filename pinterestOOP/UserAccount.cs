@@ -2,8 +2,8 @@
 
 namespace pinterestOOP
 {
-    // Mewarisi abstract class 'account' DAN memakai interface 'IReportable'
-    public class UserAccount : account, IReportable
+    // Mewarisi abstract class 'Account' DAN memakai interface 'IReportable'
+    public class UserAccount : Account, IReportable
     {
         private bool isBanned;
 

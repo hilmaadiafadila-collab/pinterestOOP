@@ -2,7 +2,7 @@
 
 namespace pinterestOOP
 {
-    public class comment
+    public class Comment
     {
         private string teks;
         private string usernamePembuat;
@@ -41,7 +41,7 @@ namespace pinterestOOP
             }
         }
 
-        public comment(string teks, string username)
+        public Comment(string teks, string username)
         {
             this.Teks = teks;
             this.UsernamePembuat = username;
