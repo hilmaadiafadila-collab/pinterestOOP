@@ -48,7 +48,7 @@ namespace pinterestOOP
 
         // Mengganti _ dengan nama variabel biasa.
         // Protected agar bisa diakses oleh subclass seperti ImagePin.
-        protected List<Comment> daftarKomentar = new List<comment>();
+        protected List<Comment> daftarKomentar = new List<Comment>();
 
         public abstract void TampilkanKonten();
 

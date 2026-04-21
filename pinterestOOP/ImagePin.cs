@@ -51,7 +51,7 @@ namespace pinterestOOP
 
         public void TambahKomentar(string teks, string user)
         {
-            comment komenBaru = new comment(teks, user);
+            Comment komenBaru = new Comment(teks, user);
             this.daftarKomentar.Add(komenBaru);
             Console.WriteLine($"{user} berkomentar di gambar: {teks}");
         }
